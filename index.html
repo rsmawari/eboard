@@ -36,7 +36,7 @@
 <dialog id="adminDialog"><div class="modal"><h3>Admin Board</h3><p class="tiny">PIN ini harus sama dengan <code>ADMIN_PIN</code> di Code.gs.</p><div class="field"><label for="adminPin">PIN admin</label><input class="control" id="adminPin" type="password" required autocomplete="current-password" placeholder="Masukkan PIN admin"></div><div class="field"><label>Tambah guru</label><div style="display:grid;grid-template-columns:1fr 1fr auto;gap:7px"><input class="control" id="newTeacherName" placeholder="Nama guru"><input class="control" id="newTeacherSlug" placeholder="slug-opsional"><button class="btn primary" id="addTeacherBtn">Tambah</button></div></div><div class="admin-list" id="adminTeacherList"></div><div class="modal-actions"><button class="btn" id="closeAdminBtn">Tutup</button></div><div class="status" id="adminStatus"></div></div></dialog>
 <script>
 (()=>{
-  const API_URL='PASTE_GOOGLE_APPS_SCRIPT_WEB_APP_URL_HERE';
+  const API_URL='https://script.google.com/macros/s/AKfycbwBg91rhENg6IIKlzNJ9TVIfase9w8GDj3LkAeQEKUTf5-Nb4_dXZsj5Ot4BRwWht4/exec';
   const COLORS=['#fff7ed','#fef3c7','#ecfccb','#dcfce7','#e0f2fe','#ede9fe','#fce7f3','#f3f4f6'];
   const EMOJIS=['😊','🥳','🎉','🎓','🎂','💐','🌷','🌻','✨','💛','💜','❤️','👏','🙌','🤗','🙏','🌟','🎈','🎁','📚','🏆','💪','☕','🫶','😁','😂','🥹','😍','😎','🤩','💫','🌈','🧡','💚','💙'];
   let teachers=[],settings={},currentTeacher='',selectedColor=COLORS[0],imageDataUrl='',refreshTimer=null,busy=false;
